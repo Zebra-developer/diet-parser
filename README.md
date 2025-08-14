@@ -21,6 +21,7 @@
 
 ## Автор:
 Zebra_Developer
+
 Моя визитка - https://my-business-card-4qs2.onrender.com
 
 ## Установка и запуск:
@@ -28,4 +29,5 @@ Zebra_Developer
 ```bash
 git clone https://github.com/Zebra-developer/diet-parser-git
 pip install -r requirements.txt
+
 python diet_parser.py
