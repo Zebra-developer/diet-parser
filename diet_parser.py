@@ -10,33 +10,8 @@ from random import randrange
 
 headers = {
 	'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-	'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0'
+	'User-Agent': 'Mozilla/5.0 '
 }
-
-#req = requests.get(url, headers=headers)
-
-#src = req.text
-#print(src)
-
-#with open('index.html', 'w', encoding='utf-8') as file:
-#	file.write(src)
-
-#with open('index.html', 'r', encoding='utf-8') as file:
-#	src = file.read()
-
-#soup = BeautifulSoup(src, 'lxml')
-#all_product = soup.find_all(class_='mzr-tc-group-item-href')
-
-#product_url_dict = {}
-
-#for item in all_product:
-#	item_index = item.text
-#	item_url = 'https://health-diet.ru' + item.get('href')
-	
-#	product_url_dict[item_index] = item_url
-
-#with open('product_url.json', 'w', encoding='utf-8') as file:
-#	json.dump(product_url_dict, file, indent=4, ensure_ascii=False)
 
 with open('product_url.json', encoding='utf-8') as file:
 	all_categories = json.load(file)
@@ -140,4 +115,5 @@ for name, url in all_categories.items():
 		break
 
 	print(f'Осталоcь итераций: {interation_count}')
+
 	sleep(randrange(2, 4))
